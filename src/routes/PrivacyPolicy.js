@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
   const [content, setContent] = React.useState("");
 
   useEffect(() => {
-    fetch("/privacy-policy.txt")
+    fetch(`${process.env.PUBLIC_URL}/privacy-policy.txt`)
       .then((response) => response.text())
       .then((text) => setContent(text));
   }, []);

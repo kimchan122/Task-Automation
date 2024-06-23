@@ -4,7 +4,7 @@ const TermsOfService = () => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch("/terms-of-service.txt")
+    fetch(`${process.env.PUBLIC_URL}/terms-of-service.txt`)
       .then((response) => response.text())
       .then((text) => setContent(text));
   }, []);
